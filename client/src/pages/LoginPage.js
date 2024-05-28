@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useAuth } from '../utils/authUtils';
-import { useHistory, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login } = useAuth();
-  const history = useHistory();
+  const Navigate = useNavigate();
+  const history = Navigate();
   const location = useLocation();
+  
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();

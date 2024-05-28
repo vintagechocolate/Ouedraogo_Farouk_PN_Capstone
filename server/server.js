@@ -11,7 +11,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const jwtSecret = process.env.JWT_SECRET;
+const JWT_SECRET = process.env.JWT_SECRET;
 
 // Connect to MongoDB
 connectDB();

@@ -1,27 +1,16 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
-import { useAuth } from '../utils/authUtils';
+import { Navigate, useLocation } from 'react-router-dom';
 
-function PrivateRoute({ children, ...rest }) {
-  const { isAuthenticated } = useAuth();
+const PrivateRoute = ({ children, isAuthenticated }) => {
+  const location = useLocation();
 
-  return (
-    <Route
-      {...rest}
-      render={({ location }) =>
-        isAuthenticated ? (
-          children
-        ) : (
-          <Redirect
-            to={{
-              pathname: '/login',
-              state: { from: location },
-            }}
-          />
-        )
-      }
-    />
-  );
-}
+  // If the user is not authenticated, redirect them to the login page
+  if (!isAuthenticated) {
+    return <Navigate to="/login" state={{ from: location }} replace />;
+  }
+
+  // If the user is authenticated, render the children components
+  return children;
+};
 
 export default PrivateRoute;
