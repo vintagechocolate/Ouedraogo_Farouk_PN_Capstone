@@ -11,6 +11,9 @@ function Navbar() {
         <li>
           <Link to="/">Home</Link>
         </li>
+        <li>
+          <Link to="/projects">Projects</Link>
+        </li>
         {isAuthenticated ? (
           <li>
             <button onClick={logout}>Logout</button>

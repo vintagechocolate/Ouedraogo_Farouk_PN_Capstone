@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import ProjectPage from './pages/ProjectPage';
 import PrivateRoute from './components/PrivateRoute';
 import { AuthProvider } from './utils/authUtils';
 
@@ -16,6 +17,9 @@ function App() {
           <Routes>
             <PrivateRoute exact path="/">
               <HomePage />
+            </PrivateRoute>
+            <PrivateRoute path="/projects">
+              <ProjectPage />
             </PrivateRoute>
             <Route path="/login">
               <LoginPage />
