@@ -13,15 +13,15 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const JWT_SECRET = process.env.JWT_SECRET;
 
-// Connect to MongoDB
+//Connect to MongoDB
 connectDB();
 
 
-// Middleware
+//Middleware
 app.use(express.json());
 app.use(cors());
 
-// Routes
+//Routes
 app.use('/api/tasks', taskRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/projects', projectRoutes);
