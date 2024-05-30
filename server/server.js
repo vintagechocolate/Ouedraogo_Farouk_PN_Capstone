@@ -22,9 +22,9 @@ app.use(express.json());
 app.use(cors());
 
 //Routes
-app.use('/tasks', taskRoutes);
-app.use('/users', userRoutes);
-app.use('/projects', projectRoutes);
+app.use('/api/tasks', taskRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/projects', projectRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
