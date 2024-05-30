@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '../utils/authUtils';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -7,23 +7,29 @@ function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login } = useAuth();
-  const Navigate = useNavigate();
-  const history = Navigate();
+  const navigate = useNavigate();
   const location = useLocation();
-  
 
+  useEffect(() => {
+    const { from } = location.state || { from: { pathname: '/' } };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    const handleLogin = async () => {
+      try {
+        const response = await axios.post('/api/users/login', { email, password });
+        login(response.data.token);
+        navigate(from, { replace: true });
+      } catch (err) {
+        console.error(err);
+      }
+    };
 
-    try {
-      const response = await axios.post('/api/users/login', { email, password });
-      login(response.data.token);
-      const { from } = location.state || { from: { pathname: '/' } };
-      history.replace(from);
-    } catch (err) {
-      console.error(err);
+    if (email && password) {
+      handleLogin();
     }
+  }, [email, password, location.state, login, navigate]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
   };
 
   return (
