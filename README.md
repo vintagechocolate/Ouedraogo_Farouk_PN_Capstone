@@ -2,10 +2,10 @@ This is a full-stack web application built using the MERN (MongoDB, Express, Rea
 
 Features
 
-    User Authentication: Users can register and log in to the application using a secure authentication system.
-    Data Management: Authenticated users can create, read, update, and delete data entries stored in the MongoDB database.
-    Data Visualization: The application provides a clean and intuitive user interface for displaying and interacting with the data.
-    Search and Filtering: Users can search and filter the data based on various criteria, making it easier to find specific entries.
+- **Task Management**: Create, read, update, and delete tasks with descriptions, due dates, and priorities.
+- **Project Management**: Create, read, update, and delete projects with descriptions and due dates.
+- **User Authentication**: Users can create accounts, log in, and have their tasks and projects associated with their accounts.
+- **Responsive Design**: The application is designed to be responsive and work well on various devices and screen sizes.
 
 
 Technologies Used
