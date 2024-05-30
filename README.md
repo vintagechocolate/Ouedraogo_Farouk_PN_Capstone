@@ -10,7 +10,7 @@ Features
 
 Technologies Used
 
-    **MongoDB**: A NoSQL database for storing and retrieving application data.
+**MongoDB**: A NoSQL database for storing and retrieving application data.
     **Express.js**: A web application framework for Node.js, used for building the RESTful API.
     **React.js**: A JavaScript library for building the user interface components and managing the application state.
     **Node.js**: A JavaScript runtime environment for executing server-side code.
