@@ -17,5 +17,5 @@ Technologies Used
     **JSON Web Tokens (JWT)**: Used for user authentication and authorization.
     **React Router**: Used for client-side routing and rendering different views based on the URL.
     **Axios**: Used for making HTTP requests to the RESTful API from the React front-end.
-    **CSS**: Used for styling the React components and creating an appealing user interface.
+    - **CSS**: Used for styling the React components and creating an appealing user interface.
 
