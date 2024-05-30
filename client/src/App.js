@@ -15,18 +15,24 @@ function App() {
         <div>
           <Navbar />
           <Routes>
-            <PrivateRoute exact path="/">
-              <HomePage />
-            </PrivateRoute>
-            <PrivateRoute path="/projects">
-              <ProjectPage />
-            </PrivateRoute>
-            <Route path="/login">
-              <LoginPage />
-            </Route>
-            <Route path="/register">
-              <RegisterPage />
-            </Route>
+            <Route
+              path="/"
+              element={
+                <PrivateRoute>
+                  <HomePage />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/projects"
+              element={
+                <PrivateRoute>
+                  <ProjectPage />
+                </PrivateRoute>
+              }
+            />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
           </Routes>
         </div>
       </Router>
