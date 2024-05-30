@@ -5,7 +5,7 @@ Features
 - **Task Management**: Create, read, update, and delete tasks with descriptions, due dates, and priorities.
 - **Project Management**: Create, read, update, and delete projects with descriptions and due dates.
 - **User Authentication**: Users can create accounts, log in, and have their tasks and projects associated with their accounts.
-- **Responsive Design**: The application is designed to be responsive and work well on various devices and screen sizes.
+- **Responsive Design**: The application once completed will be responsive and work well on various devices and screen sizes.
 
 
 Technologies Used
